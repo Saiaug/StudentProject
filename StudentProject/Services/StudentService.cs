@@ -53,12 +53,19 @@ namespace StudentProject.Services
                     _temp.Class = studentModel.Class;
                     _temp.StudentFirstName = studentModel.StudentFirstName;
                     _temp.StudentLastName = studentModel.StudentLastName;
-                    _temp.Section = studentModel.Section;
+                    _temp.YearofEnrollment = studentModel.YearofEnrollment; 
+               
+                    //_temp.YearofEnrollment = 2020;
+                    /*if (_temp == null)
+                    {
+                        studentModel.YearofEnrollment = 2020;
+                    }*/
                     _context.Update<Student>(_temp);
                     model.Messsage = "Student Details Updated Successfully";
                 }
                 else
                 {
+                    studentModel.YearofEnrollment = 2020;
                     _context.Add<Student>(studentModel);
                     model.Messsage = "Student Inserted Successfully";
                 }

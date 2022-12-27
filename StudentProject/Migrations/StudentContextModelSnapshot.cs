@@ -29,14 +29,14 @@ namespace StudentProject.Migrations
                     b.Property<string>("Class")
                         .HasColumnType("text");
 
-                    b.Property<string>("Section")
-                        .HasColumnType("text");
-
                     b.Property<string>("StudentFirstName")
                         .HasColumnType("text");
 
                     b.Property<string>("StudentLastName")
                         .HasColumnType("text");
+
+                    b.Property<int>("YearofEnrollment")
+                        .HasColumnType("integer");
 
                     b.HasKey("Rollno");
 

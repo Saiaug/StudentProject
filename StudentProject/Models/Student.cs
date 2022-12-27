@@ -12,8 +12,10 @@ namespace StudentProject.Models
         public string? StudentLastName { get; set; }
         
         public string? Class { get; set; }
-        [Required]
-        public string? Section { get; set; }
+        //[Required]
+        //public string? Section { get; set; }
+
+        public int YearofEnrollment { get; set; }
         
     }
 }
