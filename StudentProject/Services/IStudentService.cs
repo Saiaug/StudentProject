@@ -11,6 +11,6 @@ namespace StudentProject.Services
 
         ResponseModel SaveStudentDetails(Student studentModel);
 
-        ResponseModel DeleteStudent(string Rollno);
+       // ResponseModel DeleteStudent(string Rollno);
     }
 }

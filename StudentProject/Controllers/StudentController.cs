@@ -28,7 +28,7 @@ namespace StudentProject.Controllers
             }
         }
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("[action]/Rollno")]
         public IActionResult GetStudentsByRollno(string Rollno)
         {
@@ -42,7 +42,7 @@ namespace StudentProject.Controllers
             {
                 return BadRequest();
             }
-        }
+        }*/
         [HttpPost]
         [Route("[action]")]
         public IActionResult SaveStudentDetails(Student employeeModel)
@@ -58,7 +58,7 @@ namespace StudentProject.Controllers
             }
         }
 
-        [HttpDelete]
+        /*[HttpDelete]
         [Route("[action]")]
         public IActionResult DeleteStudent(string Rollno)
         {
@@ -71,7 +71,7 @@ namespace StudentProject.Controllers
             {
                 return BadRequest();
             }
-        }
+        }*/
         /*public IActionResult Index()
         {
             return View();

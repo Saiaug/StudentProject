@@ -29,6 +29,9 @@ namespace StudentProject.Migrations
                     b.Property<string>("Class")
                         .HasColumnType("text");
 
+                    b.Property<string>("Section")
+                        .HasColumnType("text");
+
                     b.Property<string>("StudentFirstName")
                         .HasColumnType("text");
 

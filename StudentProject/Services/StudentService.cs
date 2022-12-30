@@ -47,12 +47,14 @@ namespace StudentProject.Services
             {
                 Student _temp = GetStudentDetailsByRollno(studentModel.Rollno);
                 //Student _temp = GetStudentsList();
+
                 if (_temp != null)
                 {
                     //_temp.Rollno = studentModel.Rollno;
                     _temp.Class = studentModel.Class;
                     _temp.StudentFirstName = studentModel.StudentFirstName;
                     _temp.StudentLastName = studentModel.StudentLastName;
+                    _temp.Section = studentModel.Section;
                     _temp.YearofEnrollment = studentModel.YearofEnrollment; 
                
                     //_temp.YearofEnrollment = 2020;
@@ -63,9 +65,18 @@ namespace StudentProject.Services
                     _context.Update<Student>(_temp);
                     model.Messsage = "Student Details Updated Successfully";
                 }
+
                 else
                 {
-                    studentModel.YearofEnrollment = 2020;
+                    if (studentModel.Section == null )
+                    {
+                        studentModel.Section = "NA";
+                        
+                    }
+                    if (studentModel.YearofEnrollment == 0)
+                    {
+                        studentModel.YearofEnrollment = 2020;
+                    }
                     _context.Add<Student>(studentModel);
                     model.Messsage = "Student Inserted Successfully";
                 }
@@ -80,7 +91,7 @@ namespace StudentProject.Services
             return model;
         }
 
-        public ResponseModel DeleteStudent(string Rollno)
+       /* public ResponseModel DeleteStudent(string Rollno)
         {
             ResponseModel model = new ResponseModel();
             try
@@ -105,6 +116,6 @@ namespace StudentProject.Services
                 model.Messsage = "Error : " + ex.Message;
             }
             return model;
-        }
+        }*/
     }
 }

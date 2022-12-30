@@ -13,7 +13,7 @@ namespace StudentProject.Models
         
         public string? Class { get; set; }
         //[Required]
-        //public string? Section { get; set; }
+        public string? Section { get; set; }
 
         public int YearofEnrollment { get; set; }
         

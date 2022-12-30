@@ -11,8 +11,8 @@ using StudentProject.Models;
 namespace StudentProject.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20221227063321_NewStudent")]
-    partial class NewStudent
+    [Migration("20221229045015_StudentDetails")]
+    partial class StudentDetails
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,9 @@ namespace StudentProject.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Class")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Section")
                         .HasColumnType("text");
 
                     b.Property<string>("StudentFirstName")

@@ -5,7 +5,7 @@
 namespace StudentProject.Migrations
 {
     /// <inheritdoc />
-    public partial class NewStudent : Migration
+    public partial class StudentDetails : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,6 +18,7 @@ namespace StudentProject.Migrations
                     StudentFirstName = table.Column<string>(type: "text", nullable: true),
                     StudentLastName = table.Column<string>(type: "text", nullable: true),
                     Class = table.Column<string>(type: "text", nullable: true),
+                    Section = table.Column<string>(type: "text", nullable: true),
                     YearofEnrollment = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
